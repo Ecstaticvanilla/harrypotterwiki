@@ -1,92 +1,118 @@
 import os
 from dotenv import load_dotenv
-from langchain.document_loaders import TextLoader  
-from langchain.text_splitter import RecursiveCharacterTextSplitter  
-from langchain.embeddings import GooglePalmEmbeddings  
-from langchain.vectorstores import Chroma  
-from langchain.chains import RetrievalQA
-from langchain.prompts import PromptTemplate
-from langchain_google_genai import ChatGoogleGenerativeAI  
-
-
+import chromadb
+import google.generativeai as genai
 import streamlit as st
+from sentence_transformers import SentenceTransformer
 
-api_key = st.secrets["gemini_apikey"]
+try:
+    api_key = st.secrets["gemini_apikey"]
+    genai.configure(api_key=api_key)
+except KeyError:
+    print("Gemini API key not found in Streamlit secrets. Ensure it's set up correctly.")
 
+embedding_model_name = "all-MiniLM-L6-v2"
+generation_model_name = "gemini-1.5-pro"
 
-def load_and_chunk_books(book_paths):
-    """Loads text from book files and chunks it."""
+BOOK_FILE_PATHS = [
+    "data/books/harry-potter-1.txt",
+    "data/books/harry-potter-2.txt",
+    "data/books/harry-potter-3.txt",
+    "data/books/harry-potter-4.txt",
+    "data/books/harry-potter-5.txt",
+    "data/books/harry-potter-6.txt",
+    "data/books/harry-potter-7.txt",
+]
+CHROMA_DB_PATH = "harry_potter_chroma_db"
+COLLECTION_NAME = "harry_potter_lore"
+
+def load_books(book_paths):
+    """Loads text from book files."""
     all_texts = []
     for path in book_paths:
-        loader = TextLoader(path)
-        documents = loader.load()
-        all_texts.extend(documents)
+        with open(path, "r", encoding="utf-8") as f:
+            all_texts.append(f.read())
+    return all_texts
 
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
-    chunks = text_splitter.split_documents(all_texts)
+def chunk_text(texts, chunk_size=1000, chunk_overlap=100):
+    """Splits text into smaller chunks."""
+    chunks = []
+    for text in texts:
+        for i in range(0, len(text), chunk_size - chunk_overlap):
+            end = i + chunk_size
+            chunk = text[i:end]
+            chunks.append(chunk)
     return chunks
 
-book_file_paths = [
-    "harry_potter_book1.txt",
-    "harry_potter_book2.txt",
-]
-knowledge_base_chunks = load_and_chunk_books(book_file_paths)
+def get_chroma_collection():
+    """Gets the Chroma collection. Creates it if it doesn't exist."""
+    client = chromadb.PersistentClient(path=CHROMA_DB_PATH)
+    collection = client.get_or_create_collection(name=COLLECTION_NAME)
+    return collection
 
-CHROMA_DB_PATH = "harry_potter_chroma_db" 
-
-def get_vector_store(chunks):
-    embeddings = GooglePalmEmbeddings(google_api_key=api_key)
-    if os.path.exists(CHROMA_DB_PATH):
-        print("Loading existing Chroma database...")
-        vector_store = Chroma(persist_directory=CHROMA_DB_PATH, embedding_function=embeddings)
+def initialize_database():
+    """Initializes the Chroma database if it doesn't exist."""
+    collection = get_chroma_collection()
+    if collection.count() == 0:
+        st.info("Initializing Chroma database. This might take a few minutes...")
+        book_texts = load_books(BOOK_FILE_PATHS)
+        knowledge_base_chunks = chunk_text(book_texts)
+        embedding_model = SentenceTransformer(embedding_model_name)
+        embeddings = embedding_model.encode(knowledge_base_chunks)
+        ids = [f"chunk_{i}" for i in range(len(knowledge_base_chunks))]
+        collection.add(
+            ids=ids,
+            embeddings=embeddings,
+            documents=knowledge_base_chunks
+        )
+        st.success("Chroma database initialized!")
     else:
-        print("Creating and persisting Chroma database...")
-        vector_store = Chroma.from_documents(chunks, embeddings, persist_directory=CHROMA_DB_PATH)
-        vector_store.persist()
-    return vector_store
+        print("Chroma database already exists.")
+    return collection
 
-vector_database = get_vector_store(knowledge_base_chunks)
+@st.cache_resource
+def get_vector_database():
+    """Loads the existing Chroma database."""
+    return get_chroma_collection()
 
+def search_chroma(collection, query, n_results=3):
+    """Searches Chroma for relevant documents."""
+    embedding_model = SentenceTransformer(embedding_model_name)
+    embedding = embedding_model.encode([query])[0]
+    results = collection.query(
+        query_embeddings=[embedding],
+        n_results=n_results,
+        include=["documents"]
+    )
+    return results["documents"][0]
 
-prompt_template = """Use the following pieces of context from the Harry Potter books to determine if the user's prompt is consistent with established facts. If the prompt is inconsistent, explain why and quote the relevant information from the context if possible. If the prompt is consistent, simply state "Consistent."
+def generate_answer(prompt, context, model_name):
+    """Generates an answer using Gemini."""
+    model = genai.GenerativeModel(model_name)
+    response = model.generate_content(f"{prompt}\n\nContext:\n{context}")
+    return response.text
 
-Context:
-{context}
+prompt_template = """Use the following context from the Harry Potter books to determine if the user's prompt is consistent with established facts. If the prompt is inconsistent, explain why and quote the relevant information from the context if possible. If the prompt is consistent, simply state "Consistent."
 
 User Prompt: {question}
-Answer: """
+"""
 
-PROMPT = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
+st.title("Harry Potter Lore Consistency Checker")
 
+vector_database = initialize_database()
 
-def setup_rag_chain_gemini(vector_store):
-    """Sets up the RetrievalQA chain using Gemini for generation."""
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=api_key)
-    rag_chain = RetrievalQA.from_chain_type(
-        llm=llm,
-        retriever=vector_store.as_retriever(search_kwargs={"k": 3}), 
-        chain_type_kwargs={"prompt": PROMPT}
-    )
-    return rag_chain
+user_prompt = st.text_input("Enter a prompt related to the Harry Potter universe:")
 
-rag_model = setup_rag_chain_gemini(vector_database)
+if user_prompt:
+    if vector_database is not None and vector_database.count() > 0:
+        with st.spinner("Checking consistency..."):
+            relevant_chunks = search_chroma(vector_database, user_prompt)
+            context = "\n".join(relevant_chunks)
+            final_prompt = prompt_template.format(question=user_prompt)
+            consistency_result = generate_answer(final_prompt, context, generation_model_name)
 
+        st.subheader("Consistency Check Result:")
+        st.write(consistency_result)
+    else:
+        st.warning("The Chroma database is not initialized. Please wait for the initialization to complete.")
 
-def check_harry_potter_consistency(prompt):
-    """Checks if a given prompt is consistent with Harry Potter lore using the RAG model with Gemini."""
-    result = rag_model({"query": prompt})
-    return result["result"]
-
-
-if __name__ == "__main__":
-    inconsistent_prompt = "Harry becomes a professional Quidditch player for Slytherin after Hogwarts."
-    consistency_check_result_inconsistent = check_harry_potter_consistency(inconsistent_prompt)
-    print(f"Prompt: {inconsistent_prompt}\nResult: {consistency_check_result_inconsistent}\n")
-
-    consistent_prompt = "Hermione works in the Ministry of Magic after the war."
-    consistency_check_result_consistent = check_harry_potter_consistency(consistent_prompt)
-    print(f"Prompt: {consistent_prompt}\nResult: {consistency_check_result_consistent}\n")
-
-    another_inconsistent_prompt = "Dumbledore taught Potions at Hogwarts."
-    consistency_check_result_another_inconsistent = check_harry_potter_consistency(another_inconsistent_prompt)
-    print(f"Prompt: {another_inconsistent_prompt}\nResult: {consistency_check_result_another_inconsistent}\n")
