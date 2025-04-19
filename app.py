@@ -85,13 +85,13 @@ with tabs[2]:
     This graph shows who's friends, foes, or family — in true magical fashion! 
     """)
 
-    st.subheader("🧙‍♂️ Select the type of graph to display:")
+    st.subheader("Select the type of graph to display:")
     graph_type = st.selectbox(
         "Choose the graph to display:",
-        options=["Character Graph", "Loyalty Graph"]
+        options=["Character Graph", "Loyalty Graph","Location Graph", "Individual Character"]
     )
     if graph_type == "Character Graph":
-        st.subheader("🧙‍♂️ Select the number of top characters to display:")
+        st.subheader("Select the number of top characters to display:")
         
         top_n = st.slider(
             "Choose the number of top characters:",
@@ -107,6 +107,23 @@ with tabs[2]:
     elif graph_type == "Loyalty Graph":
         fig = knowledgegraphcharacters.plot_loyalty_graph(house=selected_house)
         st.pyplot(fig)
+
+    elif graph_type == "Location Graph":
+        fig = knowledgegraphcharacters.plot_location_graph(house=selected_house)
+        st.pyplot(fig)
+
+    elif graph_type == "Individual Character":
+        character_name = st.text_input("Enter a character name (e.g., Harry Potter):")
+        graph_mode = st.radio("Select graph type", ["Relationship", "Loyalty"])
+        if character_name:
+            if graph_mode == "Relationship":
+                fig = knowledgegraphcharacters.plot_character_relationships(character=character_name, house=selected_house)
+            else:
+                fig = knowledgegraphcharacters.plot_character_loyalties(character=character_name, house=selected_house)
+            if fig:
+                st.pyplot(fig)
+        else:
+            st.warning("Not present for this graph")
 
 
 with tabs[3]:

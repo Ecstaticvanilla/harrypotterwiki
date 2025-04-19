@@ -1,151 +1,201 @@
 Source,Target,RelationshipType
-Harry Potter,Ron Weasley,friend
-Harry Potter,Hermione Granger,friend
-Harry Potter,Ginny Weasley,spouse
-Ron Weasley,Hermione Granger,spouse
-James Potter,Lily Potter,spouse
-Sirius Black,James Potter,friend
-Draco Malfoy,Harry Potter,enemy
-Severus Snape,Harry Potter,enemy
-Remus Lupin,Nymphadora Tonks,spouse
-Albus Dumbledore,Gellert Grindelwald,enemy
-Harry Potter,Albus Dumbledore,mentor
-Harry Potter,Hagrid,friend
-Neville Longbottom,Luna Lovegood,friend
-Fred Weasley,George Weasley,sibling
-Percy Weasley,Fred Weasley,sibling
-Molly Weasley,Arthur Weasley,spouse
-Harry Potter,Dudley Dursley,cousin
-Petunia Dursley,Lily Potter,sibling
-Lucius Malfoy,Draco Malfoy,parent
-Bellatrix Lestrange,Narcissa Malfoy,sibling
-Harry Potter,Ron Weasley,friend
-Harry Potter,Hermione Granger,friend
-Harry Potter,Ginny Weasley,spouse
-Ron Weasley,Hermione Granger,spouse
-James Potter,Lily Potter,spouse
-Sirius Black,James Potter,friend
-Draco Malfoy,Harry Potter,enemy
-Severus Snape,Harry Potter,enemy
-Remus Lupin,Nymphadora Tonks,spouse
-Albus Dumbledore,Gellert Grindelwald,enemy
-Harry Potter,Albus Dumbledore,mentor
-Harry Potter,Hagrid,friend
-Neville Longbottom,Luna Lovegood,friend
-Fred Weasley,George Weasley,sibling
-Percy Weasley,Fred Weasley,sibling
-Molly Weasley,Arthur Weasley,spouse
-Harry Potter,Dudley Dursley,cousin
-Petunia Dursley,Lily Potter,sibling
-Lucius Malfoy,Draco Malfoy,parent
-Bellatrix Lestrange,Narcissa Malfoy,sibling
-Harry Potter,Ron Weasley,friend
-Harry Potter,Hermione Granger,friend
-Harry Potter,Ginny Weasley,spouse
-Ron Weasley,Hermione Granger,spouse
-James Potter,Lily Potter,spouse
-Sirius Black,James Potter,friend
-Draco Malfoy,Harry Potter,enemy
-Severus Snape,Harry Potter,enemy
-Remus Lupin,Nymphadora Tonks,spouse
-Albus Dumbledore,Gellert Grindelwald,enemy
-Harry Potter,Albus Dumbledore,mentor
-Harry Potter,Hagrid,friend
-Neville Longbottom,Luna Lovegood,friend
-Fred Weasley,George Weasley,sibling
-Percy Weasley,Fred Weasley,sibling
-Molly Weasley,Arthur Weasley,spouse
-Harry Potter,Dudley Dursley,cousin
-Petunia Dursley,Lily Potter,sibling
-Lucius Malfoy,Draco Malfoy,parent
-Bellatrix Lestrange,Narcissa Malfoy,sibling
-Harry Potter,Ron Weasley,friend
-Harry Potter,Hermione Granger,friend
-Harry Potter,Ginny Weasley,spouse
-Ron Weasley,Hermione Granger,spouse
-James Potter,Lily Potter,spouse
-Sirius Black,James Potter,friend
-Draco Malfoy,Harry Potter,enemy
-Severus Snape,Harry Potter,enemy
-Remus Lupin,Nymphadora Tonks,spouse
-Albus Dumbledore,Gellert Grindelwald,enemy
-Harry Potter,Albus Dumbledore,mentor
-Harry Potter,Hagrid,friend
-Neville Longbottom,Luna Lovegood,friend
-Fred Weasley,George Weasley,sibling
-Percy Weasley,Fred Weasley,sibling
-Molly Weasley,Arthur Weasley,spouse
-Harry Potter,Dudley Dursley,cousin
-Petunia Dursley,Lily Potter,sibling
-Lucius Malfoy,Draco Malfoy,parent
-Bellatrix Lestrange,Narcissa Malfoy,sibling
-Harry Potter,Ron Weasley,friend
-Harry Potter,Hermione Granger,friend
-Harry Potter,Ginny Weasley,spouse
-Ron Weasley,Hermione Granger,spouse
-James Potter,Lily Potter,spouse
-Sirius Black,James Potter,friend
-Draco Malfoy,Harry Potter,enemy
-Severus Snape,Harry Potter,enemy
-Remus Lupin,Nymphadora Tonks,spouse
-Albus Dumbledore,Gellert Grindelwald,enemy
-Harry Potter,Albus Dumbledore,mentor
-Harry Potter,Hagrid,friend
-Neville Longbottom,Luna Lovegood,friend
-Fred Weasley,George Weasley,sibling
-Percy Weasley,Fred Weasley,sibling
-Molly Weasley,Arthur Weasley,spouse
-Harry Potter,Dudley Dursley,cousin
-Petunia Dursley,Lily Potter,sibling
-Lucius Malfoy,Draco Malfoy,parent
-Bellatrix Lestrange,Narcissa Malfoy,sibling
-Harry Potter,Ron Weasley,friend
-Harry Potter,Hermione Granger,friend
-Harry Potter,Ginny Weasley,spouse
-Ron Weasley,Hermione Granger,spouse
-James Potter,Lily Potter,spouse
-Sirius Black,James Potter,friend
-Draco Malfoy,Harry Potter,enemy
-Severus Snape,Harry Potter,enemy
-Remus Lupin,Nymphadora Tonks,spouse
-Albus Dumbledore,Gellert Grindelwald,enemy
-Harry Potter,Albus Dumbledore,mentor
-Harry Potter,Hagrid,friend
-Neville Longbottom,Luna Lovegood,friend
-Fred Weasley,George Weasley,sibling
-Percy Weasley,Fred Weasley,sibling
-Molly Weasley,Arthur Weasley,spouse
-Harry Potter,Dudley Dursley,cousin
-Petunia Dursley,Lily Potter,sibling
-Lucius Malfoy,Draco Malfoy,parent
-Bellatrix Lestrange,Narcissa Malfoy,sibling
-Harry Potter,Ron Weasley,friend
-Harry Potter,Hermione Granger,friend
-Harry Potter,Ginny Weasley,spouse
-Ron Weasley,Hermione Granger,spouse
-James Potter,Lily Potter,spouse
-Sirius Black,James Potter,friend
-Draco Malfoy,Harry Potter,enemy
-Severus Snape,Harry Potter,enemy
-Remus Lupin,Nymphadora Tonks,spouse
-Albus Dumbledore,Gellert Grindelwald,enemy
-Harry Potter,Albus Dumbledore,mentor
-Harry Potter,Hagrid,friend
-Neville Longbottom,Luna Lovegood,friend
-Fred Weasley,George Weasley,sibling
-Percy Weasley,Fred Weasley,sibling
-Molly Weasley,Arthur Weasley,spouse
-Harry Potter,Dudley Dursley,cousin
-Petunia Dursley,Lily Potter,sibling
-Lucius Malfoy,Draco Malfoy,parent
-Bellatrix Lestrange,Narcissa Malfoy,sibling
-Harry Potter,Ron Weasley,friend
-Harry Potter,Hermione Granger,friend
-Harry Potter,Ginny Weasley,spouse
-Ron Weasley,Hermione Granger,spouse
-James Potter,Lily Potter,spouse
-Sirius Black,James Potter,friend
-Draco Malfoy,Harry Potter,enemy
-Severus Snape,Harry Potter,enemy
-Remus Lupin,Nymphadora Tonks,spouse
-Albus Dumbledore,Gellert Grindelwald,enemy
+Harry Potter,Ron Weasley,Best Friends
+Harry Potter,Hermione Granger,Best Friends
+Harry Potter,Ginny Weasley,Married
+Harry Potter,Albus Dumbledore,Mentor
+Harry Potter,Voldemort,Enemy
+Hermione Granger,Ron Weasley,Married
+Hermione Granger,Draco Malfoy,Rival
+Ron Weasley,Fred Weasley,Brother
+Ron Weasley,George Weasley,Brother
+Ginny Weasley,Luna Lovegood,Friend
+Draco Malfoy,Voldemort,Follower
+Draco Malfoy,Lucius Malfoy,Son
+Lucius Malfoy,Narcissa Malfoy,Married
+Narcissa Malfoy,Bellatrix Lestrange,Sisters
+Bellatrix Lestrange,Voldemort,Devoted Follower
+Albus Dumbledore,Aberforth Dumbledore,Brother
+Albus Dumbledore,Severus Snape,Confidant
+Severus Snape,Lily Potter,Loved
+James Potter,Sirius Black,Best Friends
+Sirius Black,Remus Lupin,Best Friends
+Remus Lupin,Nymphadora Tonks,Married
+Nymphadora Tonks,Teddy Lupin,Mother
+Voldemort,Nagini,Companion
+Neville Longbottom,Luna Lovegood,Friend
+Neville Longbottom,Bellatrix Lestrange,Enemy
+Minerva McGonagall,Harry Potter,Mentor
+Rubeus Hagrid,Harry Potter,Friend
+Hagrid,Fang,Pet
+Dobby,Harry Potter,Ally
+Dobby,Lucius Malfoy,Freed From
+Moaning Myrtle,Tom Riddle,Victim
+Tom Riddle,Voldemort,Same Person
+Peter Pettigrew,Sirius Black,Betrayed
+Peter Pettigrew,Voldemort,Servant
+Cho Chang,Cedric Diggory,Dating
+Cho Chang,Harry Potter,Dated
+Fleur Delacour,Bill Weasley,Married
+Bill Weasley,Charlie Weasley,Brother
+Charlie Weasley,Dragons,Caretaker
+Arthur Weasley,Molly Weasley,Married
+Percy Weasley,Arthur Weasley,Son
+Percy Weasley,Ron Weasley,Brother
+Dean Thomas,Seamus Finnigan,Best Friends
+Seamus Finnigan,Neville Longbottom,Roommates
+Padma Patil,Parvati Patil,Twin Sister
+Lavender Brown,Ron Weasley,Dated
+Blaise Zabini,Draco Malfoy,Friend
+Pansy Parkinson,Draco Malfoy,Dated
+Goyle,Crabbe,Friends
+Goyle,Draco Malfoy,Follower
+Horace Slughorn,Tom Riddle,Teacher
+Horace Slughorn,Harry Potter,Mentor
+Grawp,Hagrid,Half-Brother
+Kingsley Shacklebolt,Order of Phoenix,Member
+Mundungus Fletcher,Order of Phoenix,Member
+Fenrir Greyback,Remus Lupin,Bitten
+Fenrir Greyback,Voldemort,Follower
+Barty Crouch Jr,Voldemort,Follower
+Barty Crouch Sr,Barty Crouch Jr,Father
+Amos Diggory,Cedric Diggory,Father
+Cedric Diggory,Harry Potter,Competitor
+Rita Skeeter,Hermione Granger,Exposed
+Rita Skeeter,Harry Potter,Reporter
+Delores Umbridge,Harry Potter,Hates
+Delores Umbridge,Ministry of Magic,Serves
+Cornelius Fudge,Ministry of Magic,Head
+Cornelius Fudge,Dumbledore,Distrusts
+Grawp,Giants,Related
+Harry Potter,Ron Weasley,Best Friends
+Harry Potter,Hermione Granger,Best Friends
+Harry Potter,Ginny Weasley,Married
+Harry Potter,Albus Dumbledore,Mentor
+Harry Potter,Voldemort,Enemy
+Hermione Granger,Ron Weasley,Married
+Hermione Granger,Draco Malfoy,Rival
+Ron Weasley,Fred Weasley,Brother
+Ron Weasley,George Weasley,Brother
+Ginny Weasley,Luna Lovegood,Friend
+Draco Malfoy,Voldemort,Follower
+Draco Malfoy,Lucius Malfoy,Son
+Lucius Malfoy,Narcissa Malfoy,Married
+Narcissa Malfoy,Bellatrix Lestrange,Sisters
+Bellatrix Lestrange,Voldemort,Devoted Follower
+Albus Dumbledore,Aberforth Dumbledore,Brother
+Albus Dumbledore,Severus Snape,Confidant
+Severus Snape,Lily Potter,Loved
+James Potter,Sirius Black,Best Friends
+Sirius Black,Remus Lupin,Best Friends
+Remus Lupin,Nymphadora Tonks,Married
+Nymphadora Tonks,Teddy Lupin,Mother
+Voldemort,Nagini,Companion
+Neville Longbottom,Luna Lovegood,Friend
+Neville Longbottom,Bellatrix Lestrange,Enemy
+Minerva McGonagall,Harry Potter,Mentor
+Rubeus Hagrid,Harry Potter,Friend
+Hagrid,Fang,Pet
+Dobby,Harry Potter,Ally
+Dobby,Lucius Malfoy,Freed From
+Moaning Myrtle,Tom Riddle,Victim
+Tom Riddle,Voldemort,Same Person
+Peter Pettigrew,Sirius Black,Betrayed
+Peter Pettigrew,Voldemort,Servant
+Cho Chang,Cedric Diggory,Dating
+Cho Chang,Harry Potter,Dated
+Fleur Delacour,Bill Weasley,Married
+Bill Weasley,Charlie Weasley,Brother
+Charlie Weasley,Dragons,Caretaker
+Arthur Weasley,Molly Weasley,Married
+Percy Weasley,Arthur Weasley,Son
+Percy Weasley,Ron Weasley,Brother
+Dean Thomas,Seamus Finnigan,Best Friends
+Seamus Finnigan,Neville Longbottom,Roommates
+Padma Patil,Parvati Patil,Twin Sister
+Lavender Brown,Ron Weasley,Dated
+Blaise Zabini,Draco Malfoy,Friend
+Pansy Parkinson,Draco Malfoy,Dated
+Goyle,Crabbe,Friends
+Goyle,Draco Malfoy,Follower
+Horace Slughorn,Tom Riddle,Teacher
+Horace Slughorn,Harry Potter,Mentor
+Grawp,Hagrid,Half-Brother
+Kingsley Shacklebolt,Order of Phoenix,Member
+Mundungus Fletcher,Order of Phoenix,Member
+Fenrir Greyback,Remus Lupin,Bitten
+Fenrir Greyback,Voldemort,Follower
+Barty Crouch Jr,Voldemort,Follower
+Barty Crouch Sr,Barty Crouch Jr,Father
+Amos Diggory,Cedric Diggory,Father
+Cedric Diggory,Harry Potter,Competitor
+Rita Skeeter,Hermione Granger,Exposed
+Rita Skeeter,Harry Potter,Reporter
+Delores Umbridge,Harry Potter,Hates
+Delores Umbridge,Ministry of Magic,Serves
+Cornelius Fudge,Ministry of Magic,Head
+Cornelius Fudge,Dumbledore,Distrusts
+Grawp,Giants,Related
+Harry Potter,Ron Weasley,Best Friends
+Harry Potter,Hermione Granger,Best Friends
+Harry Potter,Ginny Weasley,Married
+Harry Potter,Albus Dumbledore,Mentor
+Harry Potter,Voldemort,Enemy
+Hermione Granger,Ron Weasley,Married
+Hermione Granger,Draco Malfoy,Rival
+Ron Weasley,Fred Weasley,Brother
+Ron Weasley,George Weasley,Brother
+Ginny Weasley,Luna Lovegood,Friend
+Draco Malfoy,Voldemort,Follower
+Draco Malfoy,Lucius Malfoy,Son
+Lucius Malfoy,Narcissa Malfoy,Married
+Narcissa Malfoy,Bellatrix Lestrange,Sisters
+Bellatrix Lestrange,Voldemort,Devoted Follower
+Albus Dumbledore,Aberforth Dumbledore,Brother
+Albus Dumbledore,Severus Snape,Confidant
+Severus Snape,Lily Potter,Loved
+James Potter,Sirius Black,Best Friends
+Sirius Black,Remus Lupin,Best Friends
+Remus Lupin,Nymphadora Tonks,Married
+Nymphadora Tonks,Teddy Lupin,Mother
+Voldemort,Nagini,Companion
+Neville Longbottom,Luna Lovegood,Friend
+Neville Longbottom,Bellatrix Lestrange,Enemy
+Minerva McGonagall,Harry Potter,Mentor
+Rubeus Hagrid,Harry Potter,Friend
+Hagrid,Fang,Pet
+Dobby,Harry Potter,Ally
+Dobby,Lucius Malfoy,Freed From
+Moaning Myrtle,Tom Riddle,Victim
+Tom Riddle,Voldemort,Same Person
+Peter Pettigrew,Sirius Black,Betrayed
+Peter Pettigrew,Voldemort,Servant
+Cho Chang,Cedric Diggory,Dating
+Cho Chang,Harry Potter,Dated
+Fleur Delacour,Bill Weasley,Married
+Bill Weasley,Charlie Weasley,Brother
+Charlie Weasley,Dragons,Caretaker
+Arthur Weasley,Molly Weasley,Married
+Percy Weasley,Arthur Weasley,Son
+Percy Weasley,Ron Weasley,Brother
+Dean Thomas,Seamus Finnigan,Best Friends
+Seamus Finnigan,Neville Longbottom,Roommates
+Padma Patil,Parvati Patil,Twin Sister
+Lavender Brown,Ron Weasley,Dated
+Blaise Zabini,Draco Malfoy,Friend
+Pansy Parkinson,Draco Malfoy,Dated
+Goyle,Crabbe,Friends
+Goyle,Draco Malfoy,Follower
+Horace Slughorn,Tom Riddle,Teacher
+Horace Slughorn,Harry Potter,Mentor
+Grawp,Hagrid,Half-Brother
+Kingsley Shacklebolt,Order of Phoenix,Member
+Mundungus Fletcher,Order of Phoenix,Member
+Fenrir Greyback,Remus Lupin,Bitten
+Fenrir Greyback,Voldemort,Follower
+Barty Crouch Jr,Voldemort,Follower
+Barty Crouch Sr,Barty Crouch Jr,Father
+Amos Diggory,Cedric Diggory,Father
+Cedric Diggory,Harry Potter,Competitor
+Rita Skeeter,Hermione Granger,Exposed
+Rita Skeeter,Harry Potter,Reporter
+Delores Umbridge,Harry Potter,Hates

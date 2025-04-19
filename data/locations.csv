@@ -1,0 +1,27 @@
+Source,Target,Relationship
+Hogwarts,Gryffindor Common Room,contains
+Hogwarts,Hufflepuff Basement,contains
+Hogwarts,Ravenclaw Tower,contains
+Hogwarts,Slytherin Dungeon,contains
+Hogwarts,Great Hall,contains
+Hogwarts,Astronomy Tower,contains
+Hogwarts,Room of Requirement,contains
+Hogwarts,Forbidden Forest,nearby
+Hogwarts,Quidditch Pitch,contains
+Hogwarts,Dungeons,contains
+Diagon Alley,Ollivanders,contains
+Diagon Alley,Gringotts,contains
+Diagon Alley,Flourish and Blotts,contains
+King's Cross Station,Platform 9 3/4,contains
+Platform 9 3/4,Hogwarts Express,departs_from
+Hogwarts Express,Hogsmeade,arrives_at
+Hogsmeade,The Three Broomsticks,contains
+Hogsmeade,Honeydukes,contains
+Hogsmeade,Shrieking Shack,nearby
+Ministry of Magic,Department of Mysteries,contains
+Ministry of Magic,Courtrooms,contains
+Grimmauld Place,Sirius's Room,contains
+Azkaban,Cell Block A,contains
+Burrow,Ginny's Room,contains
+Malfoy Manor,Basement Prison,contains
+Godric's Hollow,Potter Cottage,contains
