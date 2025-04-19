@@ -2,6 +2,8 @@ import streamlit as st
 from models import bot
 import pandas as pd
 from models import knowledgegraphcharacters
+from models import contradictionDetector
+
 
 st.set_page_config(layout="wide")
 
@@ -48,10 +50,10 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("🌌 Fictional Universe World Model")
+st.title("🌌 Fictional Universe KIT")
 
 tabs = st.tabs([
-    "👤 Characters", "🌍 Locations", "📜 Rules & Lore", "⏳ Timelines", "⚙️ Technologies", "🧩 Magic/Systems"
+    "👤 Characters", "📜 Consistency Checker", "🌍 Rules & Lore", "⏳ Timelines", "⚙️ Technologies", "🧩 Magic/Systems"
 ])
 
 with tabs[0]:
@@ -74,8 +76,21 @@ with tabs[0]:
 
 with tabs[1]:
     st.header("Consistency checker")
+    vector_database = contradictionDetector.initialize_database()
     inp = st.text_input("Enter prompt", key="consistency prompy")
+    if inp:
+        if vector_database is not None and vector_database.count() > 0:
+            with st.spinner("Checking consistency..."):
+                relevant_chunks = contradictionDetector.search_chroma(vector_database, inp)
+                context = "\n".join(relevant_chunks)
+                final_prompt = contradictionDetector.prompt_template.format(question=inp)
+                consistency_result = contradictionDetector.generate_answer(final_prompt, context, contradictionDetector.generation_model_name)
+            st.subheader("Consistency Check Result:")
+            st.write(consistency_result)
+        else:
+            st.warning("The Chroma database is not initialized. Please wait for the initialization to complete.")
 
+            
 with tabs[2]:
     st.header("📜 Knowledge Graphs")
     st.title("🧙‍♂️ Harry Potter Character Graph")
@@ -127,11 +142,20 @@ with tabs[2]:
 
 
 with tabs[3]:
-    st.header("⏳ Timeline Builder")
-    st.text_input("Event Name")
-    st.date_input("Date / Time Period (if applicable)")
-    st.text_area("Event Description")
-    st.info("Coming soon: Visual timeline plot and consistency validation.")
+    st.header("⏳ Timeline ")
+    top_n = st.slider(
+        "Choose the Book till timeline:",
+        min_value=1,
+        max_value=7,
+        value=1, 
+        step=1, 
+        format="%d" 
+    )
+    timelineof = st.radio("Select graph type", ["Overall", "Character"])
+    if timelineof == "Overall" : 
+        st.warning("In progress")
+    elif timelineof == "Character" :
+        st.warning("In progress")
 
 with tabs[4]:
     st.header("⚙️ Potions")
