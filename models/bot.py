@@ -2,28 +2,41 @@ import streamlit as st
 import google.generativeai as genai
 
 genai.configure(api_key=st.secrets["gemini_apikey"])
-model = genai.GenerativeModel(model_name="gemini-2.0-flash")
+model = genai.GenerativeModel(model_name="gemini-1.5-pro")
 
-def act_as_charctae(gender, age, weight, height, activity_level, tdee, selected_meals):
-    meal_list = ', '.join(selected_meals)
-    prompt = f"""
-You are a professional nutritionist AI.
-Generate a healthy meal plan for:
-- Gender: {gender}
-- Age: {age} years
-- Weight: {weight} kg
-- Height: {height} cm
-- Activity Level: {activity_level}
-- Total Daily Energy Expenditure (TDEE): {tdee:.0f} kcal
+st.title("🎭 Character Chatbot with Gemini")
 
-Include the following meals only: {meal_list}
-For each meal:
-• Provide a complete menu  
-• Estimate calories (total ≈ TDEE split appropriately)  
-• Suggest water intake  
-• Ensure balanced macronutrients
+character_description = st.text_area(
+    "Describe your character", 
+    placeholder="E.g., You are 'Zara', a witty and sarcastic hacker who never follows rules..."
+)
 
-Respond in a clean, easy-to-read tabular format.
-"""
-    resp = model.generate_content(prompt)
-    return resp.text
+if "history" not in st.session_state:
+    st.session_state.history = []
+
+if "submit" not in st.session_state:
+    st.session_state.submit = False
+
+def submit():
+    st.session_state.submit = True
+
+user_input = st.text_input("You:", key="user_input", on_change=submit)
+
+if st.session_state.submit and user_input and character_description:
+    full_prompt = f"""
+Act as the following character: 
+{character_description}
+
+Stay in character in every response. Don't reveal you're an AI.
+
+User: {user_input}
+Character:"""
+
+    response = model.generate_content(full_prompt)
+    st.session_state.history.append(("You", user_input))
+    st.session_state.history.append(("Character", response.text.strip()))
+    st.session_state.submit = False
+    st.rerun()
+
+for role, msg in st.session_state.history:
+    st.markdown(f"**{role}:** {msg}")
