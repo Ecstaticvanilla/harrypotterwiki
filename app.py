@@ -1,26 +1,23 @@
 import streamlit as st
+from models import bot
+import pandas as pd
+
+df = pd.DataFrame({
+    "Character": ["Harry Potter", "Hermione Granger", "Ron Weasley", "Severus Snape", "Albus Dumbledore"],
+    "Personality": [
+        "You are Harry Potter, the famous young wizard known for your bravery, loyalty, and strong sense of justice.",
+        "You are Hermione Granger, a highly intelligent and resourceful witch, known for your keen intellect and loyalty.",
+        "You are Ron Weasley, the loyal and courageous friend of Harry Potter, always standing by your friends.",
+        "You are Severus Snape, a complex and mysterious wizard, known for your harsh demeanor and hidden loyalty.",
+        "You are Albus Dumbledore, a wise and powerful wizard, known for your deep knowledge and compassion."
+    ]
+})
 
 house_themes = {
-    "Gryffindor": {
-        "primaryColor": "#FFD700",
-        "backgroundColor": "#7F0909",
-        "textColor": "#FFD700",
-    },
-    "Ravenclaw": {
-        "primaryColor": "#0077CC",
-        "backgroundColor": "#0E1A40",
-        "textColor": "#A6D1FF",
-    },
-    "Hufflepuff": {
-        "primaryColor": "#FFF200",
-        "backgroundColor": "#1C1C1C",
-        "textColor": "#FFF200",
-    },
-    "Slytherin": {
-        "primaryColor": "#2ECC71",
-        "backgroundColor": "#14532d",
-        "textColor": "#CFFFE4",
-    }
+    "Gryffindor": {"primaryColor": "#FFD700", "backgroundColor": "#7F0909", "textColor": "#FFD700"},
+    "Ravenclaw": {"primaryColor": "#0077CC", "backgroundColor": "#0E1A40", "textColor": "#A6D1FF"},
+    "Hufflepuff": {"primaryColor": "#FFF200", "backgroundColor": "#1C1C1C", "textColor": "#FFF200"},
+    "Slytherin": {"primaryColor": "#2ECC71", "backgroundColor": "#14532d", "textColor": "#CFFFE4"}
 }
 
 selected_house = st.sidebar.selectbox("Choose Your House 🏰", list(house_themes.keys()))
@@ -50,22 +47,30 @@ st.markdown(f"""
 st.title("🌌 Fictional Universe World Model")
 
 tabs = st.tabs([
-    "👤 Characters", "🌍 Locations", "📜 Rules & Lore",
-    "⏳ Timelines", "⚙️ Technologies", "🧩 Magic/Systems"
+    "👤 Characters", "🌍 Locations", "📜 Rules & Lore", "⏳ Timelines", "⚙️ Technologies", "🧩 Magic/Systems"
 ])
 
 with tabs[0]:
     st.header("👤 Character Database")
-    character_name = st.text_input("Search Character Name")
+    character_name = st.text_input("Search Character Name", key="character_name")
+    
     if character_name:
-        st.markdown(f"**Character:** {character_name}")
-        st.text_input("Affiliation / Group")
-        st.text_area("Traits & Description")
-        st.text_area("Key Events or Arcs")
+        if character_name.title() in df["Character"].values:
+            character_description = df[df["Character"] == character_name]["Personality"].values[0]
+            st.markdown(f"**Character:** {character_name}")
+            st.text_area("Traits & Description", value=character_description, height=100, disabled=True)
+            
+            user_input = st.text_input(f"Talk to {character_name}", key="user_input")
+            
+            if user_input:
+                response = bot.generate_character_response(character_name, user_input, character_description)
+                st.markdown(f"**{character_name}:** {response}")
+        else:
+            st.warning("Character not found. Please enter a valid character name.")
 
 with tabs[1]:
     st.header("🌍 Location Index")
-    location_name = st.text_input("Search Location Name")
+    location_name = st.text_input("Search Location Name", key="location_name")
     if location_name:
         st.markdown(f"**Location:** {location_name}")
         st.text_area("Description / Lore")

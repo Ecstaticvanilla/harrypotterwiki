@@ -1,42 +1,20 @@
-import streamlit as st
 import google.generativeai as genai
+import streamlit as st
 
-genai.configure(api_key=st.secrets["gemini_apikey"])
+api_key = st.secrets["gemini_apikey"]
+
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel(model_name="gemini-1.5-pro")
 
-st.title("🎭 Character Chatbot with Gemini")
+def generate_character_response(character_name, user_input, character_description):
+    prompt = f"""
+    You are {character_name}, the character with the following traits:
+    {character_description}
 
-character_description = st.text_area(
-    "Describe your character", 
-    placeholder="E.g., You are 'Zara', a witty and sarcastic hacker who never follows rules..."
-)
+    Stay in character in every response. Don't reveal you're an AI.
 
-if "history" not in st.session_state:
-    st.session_state.history = []
-
-if "submit" not in st.session_state:
-    st.session_state.submit = False
-
-def submit():
-    st.session_state.submit = True
-
-user_input = st.text_input("You:", key="user_input", on_change=submit)
-
-if st.session_state.submit and user_input and character_description:
-    full_prompt = f"""
-Act as the following character: 
-{character_description}
-
-Stay in character in every response. Don't reveal you're an AI.
-
-User: {user_input}
-Character:"""
-
-    response = model.generate_content(full_prompt)
-    st.session_state.history.append(("You", user_input))
-    st.session_state.history.append(("Character", response.text.strip()))
-    st.session_state.submit = False
-    st.rerun()
-
-for role, msg in st.session_state.history:
-    st.markdown(f"**{role}:** {msg}")
+    User: {user_input}
+    Character:"""
+    
+    response = model.generate_content(prompt)
+    return response.text.strip()
