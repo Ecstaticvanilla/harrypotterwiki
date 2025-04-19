@@ -4,7 +4,7 @@ import google.generativeai as genai
 genai.configure(api_key=st.secrets["gemini_apikey"])
 model = genai.GenerativeModel(model_name="gemini-2.0-flash")
 
-def generate_meal_plan(gender, age, weight, height, activity_level, tdee, selected_meals):
+def act_as_charctae(gender, age, weight, height, activity_level, tdee, selected_meals):
     meal_list = ', '.join(selected_meals)
     prompt = f"""
 You are a professional nutritionist AI.

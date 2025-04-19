@@ -56,7 +56,7 @@ tabs = st.tabs([
 
 with tabs[0]:
     st.header("👤 Character Database")
-    character_name = st.text_input("Search or Add Character Name")
+    character_name = st.text_input("Search Character Name")
     if character_name:
         st.markdown(f"**Character:** {character_name}")
         st.text_input("Affiliation / Group")
@@ -65,7 +65,7 @@ with tabs[0]:
 
 with tabs[1]:
     st.header("🌍 Location Index")
-    location_name = st.text_input("Search or Add Location Name")
+    location_name = st.text_input("Search Location Name")
     if location_name:
         st.markdown(f"**Location:** {location_name}")
         st.text_area("Description / Lore")
@@ -74,7 +74,7 @@ with tabs[1]:
 
 with tabs[2]:
     st.header("📜 World Rules & Lore")
-    rule = st.text_area("Enter a World Rule or Lore Element")
+    rule = st.text_area("Check for a World Rule or Lore Element")
     st.selectbox("Category", ["Magic", "Technology", "Government", "History", "Other"])
     if st.button("Add Rule"):
         st.success("Rule saved (not really, this is just a prototype).")
@@ -87,8 +87,8 @@ with tabs[3]:
     st.info("Coming soon: Visual timeline plot and consistency validation.")
 
 with tabs[4]:
-    st.header("⚙️ Technologies / Artifacts")
-    tech_name = st.text_input("Tech or Artifact Name")
+    st.header("⚙️ Potions")
+    tech_name = st.text_input("Potions Name")
     st.text_area("Functionality / Description")
     st.text_input("Creator / Origin")
     st.text_area("Appears in")
