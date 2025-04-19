@@ -95,7 +95,7 @@ with tabs[4]:
 
 with tabs[5]:
     st.header("🧩 Magic, Power Systems, or Special Mechanics")
-    system_name = st.text_input("Name of System (e.g., Mana, Chi, Force)")
+    system_name = st.text_input("Name of System (e.g, Mana, Chi, Force)")
     st.text_area("How It Works")
     st.text_input("Limitations or Rules")
     st.text_input("Who Can Use It")
