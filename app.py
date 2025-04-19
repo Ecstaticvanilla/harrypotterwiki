@@ -1,6 +1,10 @@
 import streamlit as st
 from models import bot
 import pandas as pd
+from models import knowledgegraphcharacters
+
+st.set_page_config(layout="wide")
+
 
 df = pd.DataFrame({
     "Character": ["Harry Potter", "Hermione Granger", "Ron Weasley", "Severus Snape", "Albus Dumbledore"],
@@ -77,12 +81,30 @@ with tabs[1]:
         st.text_input("Region / Planet / Realm")
         st.text_input("Notable Events")
 
+import streamlit as st
+
 with tabs[2]:
-    st.header("📜 World Rules & Lore")
-    rule = st.text_area("Check for a World Rule or Lore Element")
-    st.selectbox("Category", ["Magic", "Technology", "Government", "History", "Other"])
-    if st.button("Add Rule"):
-        st.success("Rule saved (not really, this is just a prototype).")
+    st.header("📜 Knowledge Graphs")
+    st.title("🧙‍♂️ Harry Potter Character Graph")
+
+    st.markdown("""
+    Step into the wizarding web of Hogwarts' finest.  
+    This graph shows who's friends, foes, or family — in true magical fashion! 
+    """)
+
+    st.subheader("🧙‍♂️ Select the number of top characters to display:")
+
+    top_n = st.slider(
+        "Choose the number of top characters:",
+        min_value=20,
+        max_value=100,
+        value=20, 
+        step=10, 
+        format="%d" 
+    )
+    fig = knowledgegraphcharacters.plot_knowledge_graph(top_n=top_n)
+    st.plotly_chart(fig, use_container_width=True)
+
 
 with tabs[3]:
     st.header("⏳ Timeline Builder")
