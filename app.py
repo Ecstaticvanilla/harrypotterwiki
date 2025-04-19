@@ -73,15 +73,8 @@ with tabs[0]:
             st.warning("Character not found. Please enter a valid character name.")
 
 with tabs[1]:
-    st.header("🌍 Location Index")
-    location_name = st.text_input("Search Location Name", key="location_name")
-    if location_name:
-        st.markdown(f"**Location:** {location_name}")
-        st.text_area("Description / Lore")
-        st.text_input("Region / Planet / Realm")
-        st.text_input("Notable Events")
-
-import streamlit as st
+    st.header("Consistency checker")
+    inp = st.text_input("Enter prompt", key="consistency prompy")
 
 with tabs[2]:
     st.header("📜 Knowledge Graphs")
@@ -92,18 +85,28 @@ with tabs[2]:
     This graph shows who's friends, foes, or family — in true magical fashion! 
     """)
 
-    st.subheader("🧙‍♂️ Select the number of top characters to display:")
-
-    top_n = st.slider(
-        "Choose the number of top characters:",
-        min_value=20,
-        max_value=100,
-        value=20, 
-        step=10, 
-        format="%d" 
+    st.subheader("🧙‍♂️ Select the type of graph to display:")
+    graph_type = st.selectbox(
+        "Choose the graph to display:",
+        options=["Character Graph", "Loyalty Graph"]
     )
-    fig = knowledgegraphcharacters.plot_knowledge_graph(top_n=top_n)
-    st.plotly_chart(fig, use_container_width=True)
+    if graph_type == "Character Graph":
+        st.subheader("🧙‍♂️ Select the number of top characters to display:")
+        
+        top_n = st.slider(
+            "Choose the number of top characters:",
+            min_value=20,
+            max_value=100,
+            value=20, 
+            step=10, 
+            format="%d" 
+        )
+        fig = knowledgegraphcharacters.plot_character_graph(top_n=top_n, house=selected_house)
+        st.pyplot(fig)
+    
+    elif graph_type == "Loyalty Graph":
+        fig = knowledgegraphcharacters.plot_loyalty_graph(house=selected_house)
+        st.pyplot(fig)
 
 
 with tabs[3]:

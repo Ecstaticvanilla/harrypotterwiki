@@ -1,278 +1,151 @@
 Source,Target,RelationshipType
-Harry James Potter,Albus Dumbledore,Loyalty
-Harry James Potter,Dumbledore's Army,Loyalty
-Harry James Potter,Order of the Phoenix,Loyalty
-Harry James Potter,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Ronald Bilius Weasley,Dumbledore's Army,Loyalty
-Ronald Bilius Weasley,Order of the Phoenix,Loyalty
-Ronald Bilius Weasley,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Hermione Jean Granger,Dumbledore's Army,Loyalty
-Hermione Jean Granger,Order of the Phoenix,Loyalty
-Hermione Jean Granger,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Albus Percival Wulfric Brian Dumbledore,Dumbledore's Army,Loyalty
-Albus Percival Wulfric Brian Dumbledore,Order of the Phoenix,Loyalty
-Albus Percival Wulfric Brian Dumbledore,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Rubeus Hagrid,Albus Dumbledore,Loyalty
-Rubeus Hagrid,Order of the Phoenix,Loyalty
-Rubeus Hagrid,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Neville Longbottom,Dumbledore's Army,Loyalty
-Neville Longbottom,Order of the Phoenix,Loyalty
-Neville Longbottom,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Fred Weasley,Dumbledore's Army,Loyalty
-Fred Weasley,Order of the Phoenix,Loyalty
-Fred Weasley,Hogwarts School of Witchcraft and Wizardry,Loyalty
-George Weasley,Dumbledore's Army,Loyalty
-George Weasley,Order of the Phoenix,Loyalty
-George Weasley,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Ginevra (Ginny) Molly Weasley,Dumbledore's Army,Loyalty
-Ginevra (Ginny) Molly Weasley,Order of the Phoenix,Loyalty
-Ginevra (Ginny) Molly Weasley,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Dean Thomas,Dumbledore's Army,Loyalty
-Dean Thomas,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Seamus Finnigan,Dumbledore's Army,Loyalty
-Seamus Finnigan,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Lily J. Potter,Order of the Phoenix,Loyalty
-James Potter,Order of the Phoenix,Loyalty
-Sirius Black,Order of the Phoenix,Loyalty
-Remus John Lupin,Order of the Phoenix,Loyalty
-Peter Pettigrew,Lord Voldemort,Loyalty
-Peter Pettigrew,Death Eaters,Loyalty
-Percy Ignatius Weasley,Order of the Phoenix,Loyalty
-Percy Ignatius Weasley,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Percy Ignatius Weasley,British Ministry of Magic,Loyalty
-(Bill) William Arthur Weasley,Order of the Phoenix,Loyalty
-Charles Weasley,Order of the Phoenix,Loyalty
-Charles Weasley,Gringotts Wizarding Bank,Loyalty
-Lee Jordanâ,Dumbledore's Army,Loyalty
-Lee Jordanâ,Order of the Phoenix,Loyalty
-Lee Jordanâ,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Oliver Wood,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Angelina Johnson,Dumbledore's Army,Loyalty
-Angelina Johnson,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Katie Bell,Dumbledore's Army,Loyalty
-Katie Bell,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Alicia Spinnet,Dumbledore's Army,Loyalty
-Alicia Spinnet,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Lavender Brown,Dumbledore's Army,Loyalty
-Lavender Brown,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Parvati Patil,Dumbledore's Army,Loyalty
-Parvati Patil,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Romilda Vane,Dumbledore's Army,Loyalty
-Romilda Vane,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Colin Creevey,Dumbledore's Army,Loyalty
-Colin Creevey,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Cormac Mclaggen,Dumbledore's Army,Loyalty
-Cormac Mclaggen,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Minerva Mcgonagall,Albus Dumbledore,Loyalty
-Minerva Mcgonagall,Order of the Phoenix,Loyalty
-Minerva Mcgonagall,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Molly Weasley,Order of the Phoenix,Loyalty
-Arthur Weasley,Order of the Phoenix,Loyalty
-Arthur Weasley,British Ministry of Magic,Loyalty
-Quirinus Quirrell,Lord Voldemort,Loyalty
-Cho Chang,Dumbledore's Army,Loyalty
-Cho Chang,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Luna Lovegood,Dumbledore's Army,Loyalty
-Luna Lovegood,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Padma Patil,Dumbledore's Army,Loyalty
-Padma Patil,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Michael Corner,Dumbledore's Army,Loyalty
-Michael Corner,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Terry Boot,Dumbledore's Army,Loyalty
-Terry Boot,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Anthony Goldstein,Dumbledore's Army,Loyalty
-Anthony Goldstein,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Bellatrix Lestrange,Lord Voldemort Â,Loyalty
-Bellatrix Lestrange,Death Eaters,Loyalty
-Dolores Jane Umbridge,Ministry of Magic,Loyalty
-Lucius Malfoy,Lord Voldemort Â,Loyalty
-Lucius Malfoy,Death Eaters,Loyalty
-Narcissa Malfoy,Lord Voldemort Â,Loyalty
-Narcissa Malfoy,Death Eaters,Loyalty
-Rodolphus Lestrange,Lord Voldemort Â,Loyalty
-Rodolphus Lestrange,Death Eaters,Loyalty
-Barty Crouch Jr.,Lord Voldemort Â,Loyalty
-Barty Crouch Jr.,Death Eaters,Loyalty
-Alecto Carrow,Lord Voldemort Â,Loyalty
-Alecto Carrow,Death Eaters,Loyalty
-Amycus Carrow,Lord Voldemort Â,Loyalty
-Amycus Carrow,Death Eaters,Loyalty
-Nymphadora Tonks,Ministry of Magic,Loyalty
-Nymphadora Tonks,Order of the Phoenix,Loyalty
-Justin Finch-Fletchley,Dumbledore's Army,Loyalty
-Zacharias Smith,Dumbledore's Army,Loyalty
-Hannah Abbott,Dumbledore's Army,Loyalty
-Ernest Macmillan,Dumbledore's Army,Loyalty
-Susan Bones,Dumbledore's Army,Loyalty
-Walden Macnair,Lord Voldemort Â,Loyalty
-Walden Macnair,Death Eaters,Loyalty
-Augustus Rookwood,Lord Voldemort Â,Loyalty
-Augustus Rookwood,Death Eaters,Loyalty
-Antonin Dolohov,Lord Voldemort Â,Loyalty
-Antonin Dolohov,Death Eaters,Loyalty
-Corban Yaxley,Lord Voldemort Â,Loyalty
-Corban Yaxley,Death Eaters,Loyalty
-Kingsley Shacklebolt,Order of the Phoenix,Loyalty
-Alastor Moody,Order of the Phoenix,Loyalty
-Alice Longbottom,Original Order of the Phoenix,Loyalty
-Frank Longbottom,Original Order of the Phoenix,Loyalty
-Rufus Scrimgeour,Minister of Magic,Loyalty
-Cornelius Oswald Fudge,Minister of Magic,Loyalty
-Barty Crouch Sr.,Minister of Magic,Loyalty
-Amos Diggory,Minister of Magic,Loyalty
-Dedalus Diggle,Order of the Phoenix,Loyalty
-Elphias Doge,Order of the Phoenix,Loyalty
-Fleur Isabelle Delacour,Order of the Phoenix,Loyalty
-Aberforth Dumbledore,Order of the Phoenix,Loyalty
-Mundungus Fletcher,Order of the Phoenix,Loyalty
-Sturgis Podmore,Order of the Phoenix,Loyalty
-Hestia Jones,Order of the Phoenix,Loyalty
-Marlene Mckinnon,Original Order of the Phoenix,Loyalty
-Fabian Prewett,Original Order of the Phoenix,Loyalty
-Gideon Prewett,Original Order of the Phoenix,Loyalty
-Emmeline Vance,Order of the Phoenix,Loyalty
-Edgar Bones,Original Order of the Phoenix,Loyalty
-Dorcas Meadowes,Original Order of the Phoenix,Loyalty
-Benjy Fenwick,Original Order of the Phoenix,Loyalty
-Dennis Creevey,Dumbledore's Army,Loyalty
-Argus Filch,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Poppy Pomfrey,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Rolanda Hooch,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Irma Pince,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Aurora Sinistra,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Septima Vector,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Wilhelmina Grubbly-Plank,Hogwarts School of Witchcraft and Wizardry,Loyalty
-Fenrir Greyback,Lord Voldemort Â,Loyalty
-Fenrir Greyback,Death Eaters,Loyalty
-Gellert Grindelwald,Gellert Grindelwald's Acolytes,Loyalty
-Harry James Potter,Parseltongue,Skilled In
-Harry James Potter,Defence Against the Dark Arts,Skilled In
-Harry James Potter,Seeker,Skilled In
-Ronald Bilius Weasley,Wizard chess,Skilled In
-Ronald Bilius Weasley,Quidditch goalkeeping,Skilled In
-Hermione Jean Granger,Almost everything,Skilled In
-Albus Percival Wulfric Brian Dumbledore,Considered by many to be one of the most powerful wizards of his time,Skilled In
-Rubeus Hagrid,Resistant to stunning spells,Skilled In
-Rubeus Hagrid,above average strength,Skilled In
-Rubeus Hagrid,crossbowmanship,Skilled In
-Neville Longbottom,Herbology,Skilled In
-Fred Weasley,Beater,Skilled In
-George Weasley,Beater,Skilled In
-Ginevra (Ginny) Molly Weasley,Chaser,Skilled In
-Ginevra (Ginny) Molly Weasley,Bat-Bogey hex,Skilled In
-Dean Thomas,Chaser,Skilled In
-Seamus Finnigan,Pyrotechnics,Skilled In
-James Potter,Animagus,Skilled In
-James Potter,Seeker,Skilled In
-Sirius Black,Animagus,Skilled In
-Sirius Black,nonverbal magic,Skilled In
-Sirius Black,Charms,Skilled In
-Remus John Lupin,Exceptionally gifted in Defence Against the Dark Arts,Skilled In
-Peter Pettigrew,Animagus,Skilled In
-Percy Ignatius Weasley,Intelligent,Skilled In
-Percy Ignatius Weasley,hard-working,Skilled In
-Percy Ignatius Weasley,a model student,Skilled In
-(Bill) William Arthur Weasley,Highly skilled curse-breaker for Gringotts Wizarding Bank,Skilled In
-(Bill) William Arthur Weasley,very intelligent,Skilled In
-(Bill) William Arthur Weasley,past Hogwarts Head Boy,Skilled In
-Charles Weasley,Highly skilled dragon trainer,Skilled In
-Charles Weasley,one-time Gryffindor Seeker,Skilled In
-Lee Jordanâ,Quidditch commentary,Skilled In
-Lee Jordanâ,broadcasting,Skilled In
-Oliver Wood,Keeper,Skilled In
-Oliver Wood,Captain of the Gryffindor Quidditch team,Skilled In
-Angelina Johnson,Chaser,Skilled In
-Katie Bell,Chaser,Skilled In
-Alicia Spinnet,Chaser,Skilled In
-Lavender Brown,Divination,Skilled In
-Parvati Patil,Divination,Skilled In
-Romilda Vane,Spiking Chocolate Cauldrons with love potion,Skilled In
-Colin Creevey,Photography,Skilled In
-Cormac Mclaggen,Quidditch Keeper,Skilled In
-Minerva Mcgonagall,AnimagusÂ,Skilled In
-Molly Weasley,Household spells,Skilled In
-Molly Weasley,healing magic,Skilled In
-Arthur Weasley,Muggle world works,Skilled In
-Quirinus Quirrell,Learned in the theory of Defensive Magic,Skilled In
-Quirinus Quirrell,less adept in the practise,Skilled In
-Cho Chang,Seeker,Skilled In
-Luna Lovegood,Spotting Nargles,Skilled In
-Filius Flitwick,Charms,Skilled In
-Sybill Patricia Trelawney,"A Seer, though the gift is unpredictable and unconscious",Skilled In
-Garrick Ollivander,An incomparable understanding of wandcraft,Skilled In
-Padma Patil,Prefect,Skilled In
-Michael Corner,Potions,Skilled In
-Marietta Edgecombe,Covering up the spots that blight her face after betraying Dumbledore's Army,Skilled In
-Terry Boot,"Potions, also knowledgable about Charms",Skilled In
-Anthony Goldstein,Prefect,Skilled In
-Severus Snape,Extremely skilled at potions and Occlumency,Skilled In
-Draco Malfoy,"Prefect, Seeker",Skilled In
-Vincent Crabbe,Beater,Skilled In
-Gregory Goyle,Beater,Skilled In
-Bellatrix Lestrange,She is a duellist of great skill and an experienced Occlumens,Skilled In
-Dolores Jane Umbridge,Her punishment quill is of her own invention,Skilled In
-Horace Eugene Flaccus Slughorn,"Accomplished Occlumens, expert Potioneer, advanced self-transfiguration",Skilled In
-Lucius Malfoy,Skilled duellist and potioneer,Skilled In
-Regulus Arcturus Black,Seeker,Skilled In
-Pansy Parkinson,Prefect,Skilled In
-Blaise Zabini,Chaser,Skilled In
-Tom Marvolo Riddle,"Dark Lord, Outstanding manipulation, Parseltongue, Heir of Slytherin, Dark magic, Inferi creation and control",Skilled In
-Graham Montague,"Quidditch captain, Chaser",Skilled In
-Bloody Baron,Controlling Peeves,Skilled In
-Marcus Flint,"Chaser, Captain",Skilled In
-Penelope Clearwater,Prefect,Skilled In
-Roger Davies,"Quidditch Captain, Chaser",Skilled In
-Salazar Slytherin,Accomplished Legilimens and one of the first recorded Parselmouths,Skilled In
-Godric Gryffindor,The most accomplished duellist of his time,Skilled In
-Rowena Ravenclaw,"Extremely skilled witch, known for her intelligence and wisdom",Skilled In
-Cuthbert Binns,Boring a class with facts that might be interesting if anyone else was giving the lesson,Skilled In
-Barty Crouch Jr.,Skilled potioneer,Skilled In
-Charity Burbage,Teaching and studying the Muggle world,Skilled In
-Alecto Carrow,Spreading anti-Muggle propaganda,Skilled In
-Amycus Carrow,Cruciatus Curse,Skilled In
-Helga Hufflepuff,Food-related Charms. Many traditional Hogwarts recipes originated with her,Skilled In
-Fat Friar,Curing peasants of the pox,Skilled In
-Nymphadora Tonks,"Talented Auror, Metamorphmagus",Skilled In
-Pomona Sprout,Herbology,Skilled In
-Newton Scamander,"Magizoology, Order of Merlin, Second Class",Skilled In
-Cedric Diggory,Skilled Seeker,Skilled In
-Zacharias Smith,Chaser,Skilled In
-Hannah Abbott,"Defensive spells, learned with Dumbledore's Army",Skilled In
-Ernest Macmillan,"Revising, being a Prefect, getting the wrong end of the stick",Skilled In
-Susan Bones,"Defensive spells, learned with Dumbledore's Army",Skilled In
-Walden Macnair,Liaising with giants,Skilled In
-Augustus Rookwood,Spying for Lord Voldemort,Skilled In
-Antonin Dolohov,Duelling. Fought and killed Molly Weasley's brothers and Remus Lupin,Skilled In
-Corban Yaxley,"Imperius curse, undercover work",Skilled In
-Igor Karkaroff,Skilled in the Dark Arts,Skilled In
-Kingsley Shacklebolt,Exceptionally skilled duellist and Auror,Skilled In
-Alastor Moody,"A highly accomplished Auror and an outstanding duellist, also skilled in non-verbal magic",Skilled In
-Alice Longbottom,Auror,Skilled In
-Frank Longbottom,Auror,Skilled In
-Rufus Scrimgeour,Highly regarded as a skilled Auror,Skilled In
-Cornelius Oswald Fudge,Turning a blind eye to the continuing threat of Dark Magic in the name of keeping up morale,Skilled In
-Barty Crouch Sr.,"Multilingual, able to fight the Imperius curse",Skilled In
-Amos Diggory,Works for the Department for the Regulation and Control of Magical Creatures,Skilled In
-Dedalus Diggle,An enthusiastic volunteer for the Order and a helpful escort for Harry and his relatives,Skilled In
-Elphias Doge,Writing,Skilled In
-Fleur Isabelle Delacour,"part Veela, and therefore possesses some of their magical powers. She was also selected to compete in the Triwizard Tournament",Skilled In
-Aberforth Dumbledore,"Bartending, caring for Ariana",Skilled In
-Mundungus Fletcher,"Gathering information for the Order, dealing in stolen cauldrons, 'acquiring' the odd Muggle car",Skilled In
-Sturgis Podmore,Carrying out guard duty for the Order,Skilled In
-Hestia Jones,Carrying out escort missions for the Order,Skilled In
-Fabian Prewett,Duelling,Skilled In
-Gideon Prewett,Duelling,Skilled In
-Edgar Bones,Said to be a great wizard,Skilled In
-Madame Olympe Maxime,"An âexcellent dancerâ, in the words of Dumbledore himself",Skilled In
-Gabrielle Delacour,part Veela and therefore may possess some of their magical powers,Skilled In
-Viktor Krum,One of the best Seekers in the world,Skilled In
-Vernon Dursley,"Schmoozing clients, pretending magic doesn't exist",Skilled In
-Marge Dursley,Breeding bulldogs,Skilled In
-Rose Granger-Weasley,Chaser,Skilled In
-Argus Filch,Sniffing out mischief,Skilled In
-Poppy Pomfrey,Skilled medical healer,Skilled In
-Rolanda Hooch,"Teaching, flying, refereeing Quidditch matches",Skilled In
-Fenrir Greyback,Physical combat,Skilled In
-Gellert Grindelwald,Duelling,Skilled In
-Dobby,"A type of magic specific to house-elves, performed without a wand which includes the ability to apparate, disarm and make objects levitate",Skilled In
-Kreacher,"Magic performed without a wand which includes the ability to apparate, disarm and make objects levitate",Skilled In
+Harry Potter,Ron Weasley,friend
+Harry Potter,Hermione Granger,friend
+Harry Potter,Ginny Weasley,spouse
+Ron Weasley,Hermione Granger,spouse
+James Potter,Lily Potter,spouse
+Sirius Black,James Potter,friend
+Draco Malfoy,Harry Potter,enemy
+Severus Snape,Harry Potter,enemy
+Remus Lupin,Nymphadora Tonks,spouse
+Albus Dumbledore,Gellert Grindelwald,enemy
+Harry Potter,Albus Dumbledore,mentor
+Harry Potter,Hagrid,friend
+Neville Longbottom,Luna Lovegood,friend
+Fred Weasley,George Weasley,sibling
+Percy Weasley,Fred Weasley,sibling
+Molly Weasley,Arthur Weasley,spouse
+Harry Potter,Dudley Dursley,cousin
+Petunia Dursley,Lily Potter,sibling
+Lucius Malfoy,Draco Malfoy,parent
+Bellatrix Lestrange,Narcissa Malfoy,sibling
+Harry Potter,Ron Weasley,friend
+Harry Potter,Hermione Granger,friend
+Harry Potter,Ginny Weasley,spouse
+Ron Weasley,Hermione Granger,spouse
+James Potter,Lily Potter,spouse
+Sirius Black,James Potter,friend
+Draco Malfoy,Harry Potter,enemy
+Severus Snape,Harry Potter,enemy
+Remus Lupin,Nymphadora Tonks,spouse
+Albus Dumbledore,Gellert Grindelwald,enemy
+Harry Potter,Albus Dumbledore,mentor
+Harry Potter,Hagrid,friend
+Neville Longbottom,Luna Lovegood,friend
+Fred Weasley,George Weasley,sibling
+Percy Weasley,Fred Weasley,sibling
+Molly Weasley,Arthur Weasley,spouse
+Harry Potter,Dudley Dursley,cousin
+Petunia Dursley,Lily Potter,sibling
+Lucius Malfoy,Draco Malfoy,parent
+Bellatrix Lestrange,Narcissa Malfoy,sibling
+Harry Potter,Ron Weasley,friend
+Harry Potter,Hermione Granger,friend
+Harry Potter,Ginny Weasley,spouse
+Ron Weasley,Hermione Granger,spouse
+James Potter,Lily Potter,spouse
+Sirius Black,James Potter,friend
+Draco Malfoy,Harry Potter,enemy
+Severus Snape,Harry Potter,enemy
+Remus Lupin,Nymphadora Tonks,spouse
+Albus Dumbledore,Gellert Grindelwald,enemy
+Harry Potter,Albus Dumbledore,mentor
+Harry Potter,Hagrid,friend
+Neville Longbottom,Luna Lovegood,friend
+Fred Weasley,George Weasley,sibling
+Percy Weasley,Fred Weasley,sibling
+Molly Weasley,Arthur Weasley,spouse
+Harry Potter,Dudley Dursley,cousin
+Petunia Dursley,Lily Potter,sibling
+Lucius Malfoy,Draco Malfoy,parent
+Bellatrix Lestrange,Narcissa Malfoy,sibling
+Harry Potter,Ron Weasley,friend
+Harry Potter,Hermione Granger,friend
+Harry Potter,Ginny Weasley,spouse
+Ron Weasley,Hermione Granger,spouse
+James Potter,Lily Potter,spouse
+Sirius Black,James Potter,friend
+Draco Malfoy,Harry Potter,enemy
+Severus Snape,Harry Potter,enemy
+Remus Lupin,Nymphadora Tonks,spouse
+Albus Dumbledore,Gellert Grindelwald,enemy
+Harry Potter,Albus Dumbledore,mentor
+Harry Potter,Hagrid,friend
+Neville Longbottom,Luna Lovegood,friend
+Fred Weasley,George Weasley,sibling
+Percy Weasley,Fred Weasley,sibling
+Molly Weasley,Arthur Weasley,spouse
+Harry Potter,Dudley Dursley,cousin
+Petunia Dursley,Lily Potter,sibling
+Lucius Malfoy,Draco Malfoy,parent
+Bellatrix Lestrange,Narcissa Malfoy,sibling
+Harry Potter,Ron Weasley,friend
+Harry Potter,Hermione Granger,friend
+Harry Potter,Ginny Weasley,spouse
+Ron Weasley,Hermione Granger,spouse
+James Potter,Lily Potter,spouse
+Sirius Black,James Potter,friend
+Draco Malfoy,Harry Potter,enemy
+Severus Snape,Harry Potter,enemy
+Remus Lupin,Nymphadora Tonks,spouse
+Albus Dumbledore,Gellert Grindelwald,enemy
+Harry Potter,Albus Dumbledore,mentor
+Harry Potter,Hagrid,friend
+Neville Longbottom,Luna Lovegood,friend
+Fred Weasley,George Weasley,sibling
+Percy Weasley,Fred Weasley,sibling
+Molly Weasley,Arthur Weasley,spouse
+Harry Potter,Dudley Dursley,cousin
+Petunia Dursley,Lily Potter,sibling
+Lucius Malfoy,Draco Malfoy,parent
+Bellatrix Lestrange,Narcissa Malfoy,sibling
+Harry Potter,Ron Weasley,friend
+Harry Potter,Hermione Granger,friend
+Harry Potter,Ginny Weasley,spouse
+Ron Weasley,Hermione Granger,spouse
+James Potter,Lily Potter,spouse
+Sirius Black,James Potter,friend
+Draco Malfoy,Harry Potter,enemy
+Severus Snape,Harry Potter,enemy
+Remus Lupin,Nymphadora Tonks,spouse
+Albus Dumbledore,Gellert Grindelwald,enemy
+Harry Potter,Albus Dumbledore,mentor
+Harry Potter,Hagrid,friend
+Neville Longbottom,Luna Lovegood,friend
+Fred Weasley,George Weasley,sibling
+Percy Weasley,Fred Weasley,sibling
+Molly Weasley,Arthur Weasley,spouse
+Harry Potter,Dudley Dursley,cousin
+Petunia Dursley,Lily Potter,sibling
+Lucius Malfoy,Draco Malfoy,parent
+Bellatrix Lestrange,Narcissa Malfoy,sibling
+Harry Potter,Ron Weasley,friend
+Harry Potter,Hermione Granger,friend
+Harry Potter,Ginny Weasley,spouse
+Ron Weasley,Hermione Granger,spouse
+James Potter,Lily Potter,spouse
+Sirius Black,James Potter,friend
+Draco Malfoy,Harry Potter,enemy
+Severus Snape,Harry Potter,enemy
+Remus Lupin,Nymphadora Tonks,spouse
+Albus Dumbledore,Gellert Grindelwald,enemy
+Harry Potter,Albus Dumbledore,mentor
+Harry Potter,Hagrid,friend
+Neville Longbottom,Luna Lovegood,friend
+Fred Weasley,George Weasley,sibling
+Percy Weasley,Fred Weasley,sibling
+Molly Weasley,Arthur Weasley,spouse
+Harry Potter,Dudley Dursley,cousin
+Petunia Dursley,Lily Potter,sibling
+Lucius Malfoy,Draco Malfoy,parent
+Bellatrix Lestrange,Narcissa Malfoy,sibling
+Harry Potter,Ron Weasley,friend
+Harry Potter,Hermione Granger,friend
+Harry Potter,Ginny Weasley,spouse
+Ron Weasley,Hermione Granger,spouse
+James Potter,Lily Potter,spouse
+Sirius Black,James Potter,friend
+Draco Malfoy,Harry Potter,enemy
+Severus Snape,Harry Potter,enemy
+Remus Lupin,Nymphadora Tonks,spouse
+Albus Dumbledore,Gellert Grindelwald,enemy

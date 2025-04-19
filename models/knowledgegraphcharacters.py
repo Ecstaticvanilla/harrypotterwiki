@@ -1,82 +1,56 @@
 import pandas as pd
 import networkx as nx
-import plotly.graph_objects as go
+import matplotlib.pyplot as plt
+import streamlit as st
 
-def plot_knowledge_graph(top_n=20):
-    # Read the data
-    df_characters = pd.read_csv('data/graphingcharacters.csv')  
-    df_relationships = pd.read_csv('data/graphingrelationships.csv')
+house_themes = {
+    "Gryffindor": {"primaryColor": "#FCD116", "backgroundColor": "#FFF5E1", "textColor": "#D62828"},
+    "Ravenclaw":  {"primaryColor": "#F4A261", "backgroundColor": "#E0E7FF", "textColor": "#264653"},
+    "Hufflepuff": {"primaryColor": "#F4D35E", "backgroundColor": "#FAF9F6", "textColor": "#1C1C1C"},
+    "Slytherin":  {"primaryColor": "#E9C46A", "backgroundColor": "#E9F5EC", "textColor": "#2A9D8F"}
+}
 
-    # Character names and houses
-    df_characters = df_characters[['Name', 'House']]
-    character_houses = pd.Series(df_characters.House.values, index=df_characters.Name).to_dict()
+def plot_character_graph(top_n=20, house="Gryffindor"):
+    theme = house_themes.get(house, house_themes["Gryffindor"])
+    relationships = pd.read_csv('data/graphingrelationships.csv').head(top_n)
+    G = nx.DiGraph()
+    for _, row in relationships.iterrows():
+        G.add_edge(row['Source'], row['Target'], label=row['RelationshipType'])
+    k_value = 1 + top_n * 0.02
+    pos = nx.spring_layout(G, k=k_value, seed=42)
+    fig, ax = plt.subplots(figsize=(12, 8))
+    ax.set_facecolor(theme["backgroundColor"])
+    ax.axis("off")
+    nx.draw_networkx_nodes(G, pos, ax=ax, node_size=1000, node_color=theme["primaryColor"], edgecolors="white", linewidths=1.5)
+    nx.draw_networkx_edges(G, pos, ax=ax, edge_color="#555", width=1.5)
+    nx.draw_networkx_labels(G, pos, ax=ax, font_size=8, font_color=theme["textColor"], font_family="sans-serif")
+    edge_labels = nx.get_edge_attributes(G, 'label')
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=8, font_color=theme["textColor"], label_pos=0.5)
+    ax.set_title(f"{house} Knowledge Graph – Top {top_n} Relationships", fontsize=14, fontweight="bold", color=theme["textColor"], pad=10)
+    return fig
 
-    # House colors
-    house_colors = {
-        'Gryffindor': 'red',
-        'Slytherin': 'green',
-        'Hufflepuff': 'yellow',
-        'Ravenclaw': 'blue',
-    }
-
-    # Create graph and add edges
-    edges = df_relationships.to_dict('records')
-    G = nx.Graph()
-
-    nodes = df_characters['Name'].tolist()
-    G.add_nodes_from(nodes)
-
-    for edge in edges:
-        G.add_edge(edge['Source'], edge['Target'], relationship=edge['RelationshipType'])
-
-    # Select the top_n characters by degree (number of connections)
-    sorted_nodes = sorted(G.degree(), key=lambda x: x[1], reverse=True)
-    top_nodes = [node for node, degree in sorted_nodes[:top_n]]
-
-    # Create a subgraph for the top_n nodes
-    G_sub = G.subgraph(top_nodes)
-
-    # Compute the positions for the subgraph nodes
-    pos = nx.spring_layout(G_sub)  # This will generate positions for the subgraph
-    for node in G_sub.nodes():
-        G_sub.nodes[node]['pos'] = pos[node]
-
-    # Assign colors based on houses
-    node_colors = [house_colors.get(character_houses.get(node, 'Unknown'), 'grey') for node in G_sub.nodes()]
-
-    # Prepare edge and node data for the plot
-    edge_x, edge_y, edge_text = [], [], []
-    for edge in G_sub.edges():
-        x0, y0 = G_sub.nodes[edge[0]]['pos']
-        x1, y1 = G_sub.nodes[edge[1]]['pos']
-        edge_x.extend([x0, x1, None])
-        edge_y.extend([y0, y1, None])
-        edge_text.append(G_sub[edge[0]][edge[1]]['relationship'])
-
-    node_x, node_y = [], []
-    for node in G_sub.nodes():
-        x, y = G_sub.nodes[node]['pos']
-        node_x.append(x)
-        node_y.append(y)
-
-    # Create the plot
-    fig = go.Figure()
-
-    # Add edges to the plot
-    fig.add_trace(go.Scatter(x=edge_x, y=edge_y, line=dict(width=1, color='#888'),
-                             hoverinfo='text', mode='lines', text=edge_text))
-
-    # Add nodes to the plot
-    fig.add_trace(go.Scatter(x=node_x, y=node_y, mode='markers+text', hoverinfo='text',
-                             marker=dict(color=node_colors, size=10, line=dict(width=2, color='black')),
-                             text=list(G_sub.nodes())))
-
-    # Update plot layout
-    fig.update_layout(
-        title=f"Top {top_n} Harry Potter Character Relationships",
-        title_font=dict(size=24, family="Arial", color="black"),
-        showlegend=False,
-        margin=dict(l=20, r=20, t=40, b=20),
-    )
-
+def plot_loyalty_graph(house="Gryffindor"):
+    theme = house_themes.get(house, house_themes["Gryffindor"])
+    relationships = pd.read_csv('data/loyalty.csv')  
+    G = nx.DiGraph()
+    
+    for _, row in relationships.iterrows():
+        G.add_edge(row['Source'], row['Target'], label=row['Loyalty'])
+    
+    k_value = 1 + len(relationships) * 0.02 
+    pos = nx.spring_layout(G, k=k_value, seed=42)
+    
+    fig, ax = plt.subplots(figsize=(12, 8))
+    ax.set_facecolor(theme["backgroundColor"])
+    ax.axis("off")
+    
+    nx.draw_networkx_nodes(G, pos, ax=ax, node_size=600, node_color=theme["primaryColor"], edgecolors="white", linewidths=1.5)
+    nx.draw_networkx_edges(G, pos, ax=ax, edge_color="#555", width=1.5)
+    nx.draw_networkx_labels(G, pos, ax=ax, font_size=7, font_color=theme["textColor"], font_family="sans-serif")
+    
+    edge_labels = nx.get_edge_attributes(G, 'label')
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=7, font_color=theme["textColor"], label_pos=0.5)
+    
+    ax.set_title(f"{house} Loyalty Knowledge Graph", fontsize=14, fontweight="bold", color=theme["textColor"], pad=10)
+    
     return fig

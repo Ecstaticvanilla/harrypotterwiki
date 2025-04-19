@@ -1,0 +1,73 @@
+Source,Target,Loyalty
+Harry Potter,Order of the Phoenix,Is Member of
+Harry Potter,Dumbledore's Army,Is Member of
+Harry Potter,Gryffindor House,Is Member of
+Hermione Granger,Order of the Phoenix,Is Member of
+Hermione Granger,Dumbledore's Army,Is Member of
+Hermione Granger,Gryffindor House,Is Member of
+Ron Weasley,Order of the Phoenix,Is Member of
+Ron Weasley,Dumbledore's Army,Is Member of
+Ron Weasley,Gryffindor House,Is Member of
+Albus Dumbledore,Order of the Phoenix,Is Leader of
+Albus Dumbledore,Gryffindor House,Is Head of
+Sirius Black,Order of the Phoenix,Is Member of
+Sirius Black,Gryffindor House,Is Member of
+Remus Lupin,Order of the Phoenix,Is Member of
+Remus Lupin,Dumbledore's Army,Is Member of
+James Potter,Order of the Phoenix,Was Member of
+James Potter,Gryffindor House,Was Member of
+Lily Potter,Order of the Phoenix,Was Member of
+Lily Potter,Gryffindor House,Was Member of
+Severus Snape,Death Eaters,Is Member of
+Severus Snape,Order of the Phoenix,Was Double Agent
+Draco Malfoy,Death Eaters,Is Member of
+Lucius Malfoy,Death Eaters,Is Member of
+Bellatrix Lestrange,Death Eaters,Is Member of
+Narcissa Malfoy,Death Eaters,Is Supporter of
+Neville Longbottom,Dumbledore's Army,Is Member of
+Neville Longbottom,Gryffindor House,Is Member of
+Ginny Weasley,Dumbledore's Army,Is Member of
+Ginny Weasley,Gryffindor House,Is Member of
+Fred Weasley,Dumbledore's Army,Is Member of
+Fred Weasley,Gryffindor House,Is Member of
+George Weasley,Dumbledore's Army,Is Member of
+George Weasley,Gryffindor House,Is Member of
+Minerva McGonagall,Order of the Phoenix,Is Member of
+Minerva McGonagall,Gryffindor House,Is Head of
+Arthur Weasley,Order of the Phoenix,Is Member of
+Percy Weasley,Ministry of Magic,Is Member of
+Percy Weasley,Weasley Family,Is Member of
+Alastor Moody,Order of the Phoenix,Is Member of
+Fleur Delacour,Order of the Phoenix,Is Member of
+Bill Weasley,Order of the Phoenix,Is Member of
+Bill Weasley,Gryffindor House,Is Member of
+Cho Chang,Dumbledore's Army,Is Member of
+Cho Chang,Ravenclaw House,Is Member of
+Cedric Diggory,Hufflepuff House,Was Member of
+Tom Riddle (Voldemort),Death Eaters,Is Leader of
+Tom Riddle (Voldemort),Slytherin House,Is Member of
+Peter Pettigrew,Death Eaters,Is Member of
+Viktor Krum,Dumbledore's Army,Is Ally of
+Rita Skeeter,Journalist,Is Member of
+Mad-Eye Moody,Order of the Phoenix,Is Member of
+Horace Slughorn,Slytherin House,Was Head of
+Horace Slughorn,Order of the Phoenix,Is Member of
+Luna Lovegood,Dumbledore's Army,Is Member of
+Luna Lovegood,Ravenclaw House,Is Member of
+Lavender Brown,Gryffindor House,Is Member of
+Pansy Parkinson,Slytherin House,Is Member of
+Gilderoy Lockhart,Order of the Phoenix,Is Member of
+Lucius Malfoy,Death Eaters,Is Member of
+Draco Malfoy,Gryffindor House,Enemy
+Lucius Malfoy,Death Eaters,Is Supporter of
+Severus Snape,Death Eaters,Was Double Agent
+Rufus Scrimgeour,Ministry of Magic,Is Member of
+Kingsley Shacklebolt,Order of the Phoenix,Is Member of
+Dolores Umbridge,Ministry of Magic,Is Member of
+Bellatrix Lestrange,Death Eaters,Is Member of
+Gilderoy Lockhart,Order of the Phoenix,Is Member of
+Tom Riddle (Voldemort),Slytherin House,Is Member of
+Harry Potter,The Weasley Family,Is Close to
+Fred Weasley,Gryffindor House,Is Member of
+George Weasley,Gryffindor House,Is Member of
+Hermione Granger,The Weasley Family,Is Close to
