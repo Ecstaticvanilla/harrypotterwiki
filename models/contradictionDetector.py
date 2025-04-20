@@ -124,3 +124,29 @@ def suggest_plot_points(fanfic_text: str, n_context: int = 5) -> str:
     {context}
     Plot Continuation Suggestions:"""
     return generate_answer(prompt, context="", model_name=generation_model_name)
+
+#----------------------------------------------------------------------------------------------------
+def justify_plot_holes(fanfic_text: str, n_context: int = 5) -> str:
+
+    collection = get_vector_database()
+    context_chunks = search_chroma(collection, fanfic_text, n_results=n_context)
+    context = "\n\n---\n\n".join(context_chunks)
+
+    prompt = f"""You are a fanfiction continuity expert with deep knowledge of the Harry Potter universe.
+
+    The following fanfic snippet may contain inconsistencies or plot holes compared to established canon.
+    Based on the fanfic text and relevant canonical context, identify any logical or lore-based contradictions.
+    
+    For each contradiction, either:
+    - Justify it with a creative, in-universe explanation (e.g., unknown spells, rare exceptions, time-turners, etc.), or
+    - Suggest a rewrite that aligns with canonical lore.
+
+    Be helpful and constructive—your goal is to help the author maintain immersion while exploring imaginative directions.
+
+    Fanfic Snippet:
+    {fanfic_text}
+
+    Canonical Context:
+    {context}
+    🧠 Plot Hole Analysis and Justifications:"""
+    return generate_answer(prompt, context="", model_name=generation_model_name)

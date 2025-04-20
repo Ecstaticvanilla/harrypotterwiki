@@ -8,16 +8,7 @@ from models import knowledgegraph
 st.set_page_config(layout="wide")
 
 
-df = pd.DataFrame({
-    "Character": ["Harry Potter", "Hermione Granger", "Ron Weasley", "Severus Snape", "Albus Dumbledore"],
-    "Personality": [
-        "You are Harry Potter, the famous young wizard known for your bravery, loyalty, and strong sense of justice.",
-        "You are Hermione Granger, a highly intelligent and resourceful witch, known for your keen intellect and loyalty.",
-        "You are Ron Weasley, the loyal and courageous friend of Harry Potter, always standing by your friends.",
-        "You are Severus Snape, a complex and mysterious wizard, known for your harsh demeanor and hidden loyalty.",
-        "You are Albus Dumbledore, a wise and powerful wizard, known for your deep knowledge and compassion."
-    ]
-})
+df = pd.read_csv("data/chatbotpersonality.csv")
 
 house_themes = {
     "Gryffindor": {"primaryColor": "#FFD700", "backgroundColor": "#7F0909", "textColor": "#FFD700"},
@@ -63,7 +54,7 @@ st.markdown(f"""
 st.title("🌌 Fictional Universe KIT")
 
 tabs = st.tabs([
-    "👤 Characters", "📜 Consistency Checker", "🌍Knowledge Graphs", "⏳ Timelines", "⚙️ Explore plot points", "🧩 Magic/Systems"
+    "👤 Characters", "📜 Consistency Checker", "🌍Knowledge Graphs", "⏳ Timelines", "⚙️ Explore plot points", "🧩 Plot Hole Justification"
 ])
 
 with tabs[0]:
@@ -191,7 +182,7 @@ with tabs[4]:
     st.header("Suggest Plot points")
     vector_database = contradictionDetector.initialize_database()
     st.markdown("**Upload a fanfic snippet or write one manually.**")    
-    uploaded_file = st.file_uploader("Upload a file (e.g. .txt, .md, .json)", type=["txt", "md", "json", "csv"])
+    uploaded_file = st.file_uploader("Upload a file (e.g. .txt, .md, .json)", type=["txt", "md", "json", "csv"],key = "explaner")
     manual_input = st.text_area("Or paste your half-finished fanfic here:", height=200, key="manual_fanfic")
     if uploaded_file is not None:
         inp = uploaded_file.read().decode("utf-8")
@@ -212,8 +203,24 @@ with tabs[4]:
 
 
 with tabs[5]:
-    st.header("🧩 Magic, Power Systems, or Special Mechanics")
-    system_name = st.text_input("Name of System (e.g, Mana, Chi, Force)")
-    st.text_area("How It Works")
-    st.text_input("Limitations or Rules")
-    st.text_input("Who Can Use It")
+    st.header("🧩 Justify Plot Holes")
+    vector_database = contradictionDetector.initialize_database()
+    st.markdown("**Upload a fanfic snippet or write one manually.**")    
+    uploaded_file = st.file_uploader("Upload a file (e.g. .txt, .md, .json)", type=["txt", "md", "json", "csv"])
+    manual_input = st.text_area("Or paste your fanfic with plot holes which might need justification:", height=200, key="justifiers")
+    if uploaded_file is not None:
+        inp = uploaded_file.read().decode("utf-8")
+    elif manual_input:
+        inp = manual_input
+    else:
+        inp = None
+    if inp:
+        if vector_database is not None and vector_database.count() > 0:
+            with st.spinner("Finding Plot holes and justifying ..."):
+                relevant_chunks = contradictionDetector.search_chroma(vector_database, inp)
+                context = "\n".join(relevant_chunks)
+                consistency_result = contradictionDetector.justifyplotholes(inp)
+            st.subheader("📚 Plot Hole Justifications and Possible Explanations")
+            st.write(consistency_result)
+        else:
+            st.warning("The Chroma database is not initialized. Please wait for the initialization to complete.")
