@@ -219,7 +219,7 @@ with tabs[5]:
             with st.spinner("Finding Plot holes and justifying ..."):
                 relevant_chunks = contradictionDetector.search_chroma(vector_database, inp)
                 context = "\n".join(relevant_chunks)
-                consistency_result = contradictionDetector.justifyplotholes(inp)
+                consistency_result = contradictionDetector.justify_plot_holes(inp)
             st.subheader("📚 Plot Hole Justifications and Possible Explanations")
             st.write(consistency_result)
         else:
