@@ -92,8 +92,35 @@ def generate_answer(prompt, context, model_name):
     response = model.generate_content(f"{prompt}\n\nContext:\n{context}")
     return response.text
 
-prompt_template = """Use the following context from the Harry Potter books to determine if the user's prompt is consistent with established facts. If the prompt is inconsistent, explain why and quote the relevant information from the context if possible. If the prompt is consistent, simply state "Consistent."
+prompt_template = """Use the following context from the Harry Potter books to determine if the user's prompt is consistent with established facts. If the prompt is inconsistent, explain why and quote the relevant information from the context if possible. Give suggestions which the User input cn change to make it more consistent. If the prompt is consistent, simply state "Consistent."
 
 User Prompt: {question}
 """
+#--------------------------------------------------------------------------
+def suggest_plot_points(fanfic_text: str, n_context: int = 5) -> str:
+    """
+    Suggests possible plot continuations for a half-written fanfic using Harry Potter canon.
+    
+    Args:
+        fanfic_text (str): The partial fanfic input.
+        n_context (int): Number of canon-relevant chunks to retrieve from ChromaDB.
+    
+    Returns:
+        str: Gemini-generated plot point suggestions.
+    """
+    collection = get_vector_database()
+    context_chunks = search_chroma(collection, fanfic_text, n_results=n_context)
+    context = "\n\n---\n\n".join(context_chunks)
+    prompt = f"""You are an expert fanfiction assistant with deep knowledge of the Harry Potter universe.
 
+    The user is writing a fanfic, but it's currently unfinished. Based on the fanfic so far and some relevant canonical context, suggest 3–5 plot directions they could continue with.
+    
+    Ensure your suggestions make sense within Harry Potter lore and build logically on what’s been written.
+    
+    Fanfic so far:
+    {fanfic_text}
+    
+    Context from Canon:
+    {context}
+    Plot Continuation Suggestions:"""
+    return generate_answer(prompt, context="", model_name=generation_model_name)
