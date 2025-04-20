@@ -4,7 +4,7 @@ import streamlit as st
 api_key = st.secrets["gemini_apikey"]
 
 genai.configure(api_key=api_key)
-model = genai.GenerativeModel(model_name="gemini-1.5-pro")
+model = genai.GenerativeModel(model_name="gemini-2.0-flash-lite")
 
 def generate_character_response(character_name, user_input, character_description):
     prompt = f"""

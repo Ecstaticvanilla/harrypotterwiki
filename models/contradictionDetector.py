@@ -12,7 +12,7 @@ except KeyError:
     print("Gemini API key not found in Streamlit secrets. Ensure it's set up correctly.")
 
 embedding_model_name = "all-MiniLM-L6-v2"
-generation_model_name = "gemini-1.5-pro"
+generation_model_name = "gemini-2.0-flash-lite"
 
 BOOK_FILE_PATHS = [
     "data/books/harry-potter-1.txt",
