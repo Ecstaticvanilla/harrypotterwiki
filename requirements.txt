@@ -1,0 +1,17 @@
+chromadb
+dotenv
+google
+json
+matplotlib
+models
+neo4j
+networkx
+numpy
+os
+pandas
+random
+re
+sentence_transformers
+sklearn
+spacy
+streamlit
